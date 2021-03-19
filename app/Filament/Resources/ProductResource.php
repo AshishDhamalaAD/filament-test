@@ -57,6 +57,7 @@ class ProductResource extends Resource
             Pages\ListProducts::routeTo('/', 'index'),
             Pages\CreateProduct::routeTo('/create', 'create'),
             Pages\EditProduct::routeTo('/{record}/edit', 'edit'),
+            Pages\SortProducts::routeTo('/sort-products', 'sort-products'),
         ];
     }
 }
