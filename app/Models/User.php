@@ -40,4 +40,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function products()
+    {
+        return $this->belongsToMany(Product::class, 'orders', 'user_id', 'product_id');
+    }
+
+    public function images()
+    {
+        return $this->morphToMany(Image::class, 'imageable');
+    }
 }
