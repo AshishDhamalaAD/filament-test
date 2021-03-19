@@ -9,7 +9,7 @@
             type="button"
             class="{{ $primaryClasses }} hover:underline hover:text-primary-600 transition-colors duration-200"
         >
-            {{ $column->getValue($record) }}
+            {!! $column->getValue($record) !!}
         </button>
     @elseif ($column->getUrl($record) !== null)
         <a
@@ -20,9 +20,9 @@
                 rel="noopener noreferrer"
             @endif
         >
-            {{ $column->getValue($record) }}
+            {!! $column->getValue($record) !!}
         </a>
     @else
-        <span class="{{ $primaryClasses }}">{{ $column->getValue($record) }}</span>
+        <span class="{{ $primaryClasses }}">{!! $column->getValue($record) !!}</span>
     @endif
 </div>
